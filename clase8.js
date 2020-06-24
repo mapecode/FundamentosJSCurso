@@ -22,8 +22,13 @@ imprimirNombreEnMayusculas(dario)
 // imprimirNombreEnMayusculas({ apellido: 'Gomez' })
 
 function cumpleanos(persona) {
+  // para evitar el paso por referencia devolviendo un nuevo objeto
   return {
     ...persona,
     edad: persona.edad + 1
   }
+}
+
+function cumpleanos_ref(persona) {
+  persona.edad +=1
 }
